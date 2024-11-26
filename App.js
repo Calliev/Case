@@ -18,12 +18,14 @@ let isEdit = false, editId
 showInfo()
 
 newUserBtn.addEventListener('click', ()=> {
-    submitBtn.innerText = 'submit',
+    submitBtn.innerText = 'Adicionar Usuário',
     modalTitle.innerText = "Preencha seus dados"
     isEdit = false
     imgInput.src = "./image/Profile Icon.webp"
     form.reset()
 })
+
+console.log("modaltitle", modalTitle)
 
 
 file.onchange = function(){
@@ -56,11 +58,11 @@ function showInfo(){
 
 
             <td>
-                <button class="btn btn-success" onclick="readInfo('${element.picture}', '${element.employeeName}', '${element.employeeEmail}', '${element.employeePhone}', '${element.employeePost}')" data-bs-toggle="modal" data-bs-target="#readData"><i class="bi bi-eye"></i></button>
+                <button class="btn btn-outline-success" onclick="readInfo('${element.picture}', '${element.employeeName}', '${element.employeeEmail}', '${element.employeePhone}', '${element.employeePost}')" data-bs-toggle="modal" data-bs-target="#readData"><i class="bi bi-person-bounding-box"></i></button>
 
-                <button class="btn btn-primary" onclick="editInfo(${index}, '${element.picture}', '${element.employeeName}', '${element.employeeEmail}', '${element.employeePhone}', '${element.employeePost}' )" data-bs-toggle="modal" data-bs-target="#userForm"><i class="bi bi-pencil-square"></i></button>
+                <button class="btn btn-outline-primary" onclick="editInfo(${index}, '${element.picture}', '${element.employeeName}', '${element.employeeEmail}', '${element.employeePhone}', '${element.employeePost}' )" data-bs-toggle="modal" data-bs-target="#userForm"><i class="bi bi-person-gear"></i></button>
 
-                <button class="btn btn-danger" onclick="deleteInfo(${index})"><i class="bi bi-trash"></i></button>
+                <button class="btn btn-outline-danger" onclick="deleteInfo(${index})"><i class="bi bi-person-x"></i></button>
                             
             </td>
         </tr>`
@@ -90,8 +92,8 @@ function editInfo(index, pic, name,  Email, Phone, Post, ){
     post.value = Post,
 
 
-    submitBtn.innerText = "Update"
-    modalTitle.innerText = "Update The Form"
+    submitBtn.innerText = "Atualizar"
+    modalTitle.innerText = "Atualizar o formulário"
 }
 
 
