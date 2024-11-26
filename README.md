@@ -7,40 +7,6 @@ body {
     padding: 0;
     overflow-x: hidden;
     height: 100vh;
-    position: relative;
-}
-
-/* Fundo animado interativo */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(177, 119, 211, 0.5), rgba(228, 199, 245, 0.1));
-    z-index: -1;
-    pointer-events: none;
-    transition: all 0.5s ease;
-}
-
-/* Efeito de movimento do fundo */
-body {
-    cursor: pointer;
-}
-
-body:hover::before {
-    transform: scale(1.1);
-}
-
-/* Movimento do fundo conforme o mouse */
-body {
-    will-change: transform;
-    transition: transform 0.1s ease-out;
-}
-
-body.mousemove::before {
-    transition: none;
 }
 
 /* Estilo das outras partes */
@@ -243,13 +209,3 @@ form .inputField > div input:focus {
         width: 100%;
     }
 }
-
-
-document.addEventListener('mousemove', (e) => {
-    const x = e.clientX / window.innerWidth;
-    const y = e.clientY / window.innerHeight;
-
-    const body = document.querySelector('body');
-    body.style.transform = `translate(${x * 10 - 5}px, ${y * 10 - 5}px)`;
-});
-
