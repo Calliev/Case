@@ -209,3 +209,53 @@ form .inputField > div input:focus {
     }
 }
 
+/* Responsividade para telas muito pequenas (até 412px) */
+@media (max-width: 412px) {
+    /* Ajustes para a tabela */
+    table {
+        width: 100%;
+        display: block;
+        overflow-x: auto; /* Scroll horizontal */
+        white-space: nowrap; /* Evitar quebra de texto nas células */
+    }
+
+    th, td {
+        display: inline-block;
+        width: auto;
+        white-space: nowrap;
+    }
+
+    /* Ajustes no formulário dentro do modal */
+    .modal-body form {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .modal-body form .imgholder {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .modal-body form .inputField {
+        width: 100%;
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .form-select {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .modal-footer .submit {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+}

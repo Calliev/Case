@@ -1,3 +1,11 @@
+<!-- Instruções de uso
+Copie o código HTML e cole no arquivo do seu projeto (index.html).
+
+Adicione o código CSS em um arquivo de estilo separado ou dentro de um bloco <style> em seu HTML.
+
+Para testar a responsividade, abra a página em diferentes dispositivos ou utilize a ferramenta de inspeção do navegador para ajustar o tamanho da tela.
+
+-->
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -26,17 +34,17 @@
 
         <!-- Tabela com os dados do cadastrados -->
         <div class="table-responsive">
-                <table class="table table-striped table-hover mt-3 text-center table-bordered">
+                <table class="table table-striped table-hover mt-3 text-center table-bordered" id="tablesort">
 
                     <thead>
                         <tr> 
-                            <th class="table-secondary"> Id </th>
-                            <th class="table-secondary">Foto</th>
-                            <th class="table-secondary"> Nome do Usuário</th>
-                            <th class="table-secondary"> e-mail</th>
-                            <th class="table-secondary"> Perfil</th>
-                            <th class="table-secondary"> WhatsApp</th>
-                            <th class="table-secondary"> Editar</th>
+                            <th class="table-secondary" onclick="sortTable(0)"> Id </th>
+                            <th class="table-secondary" onclick="sortTable(1)">Foto</th>
+                            <th class="table-secondary" onclick="sortTable(2)"> Nome do Usuário</th>
+                            <th class="table-secondary" onclick="sortTable(3)"> e-mail</th>
+                            <th class="table-secondary" onclick="sortTable(4)"> Perfil</th>
+                            <th class="table-secondary" onclick="sortTable(5)"> WhatsApp</th>
+                            <th class="table-secondary" onclick="sortTable(6)"> Editar</th>
                         </tr>
                     </thead>
 
