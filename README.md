@@ -12,7 +12,7 @@ Este projeto consiste em uma interface web simples que exibe um formulário dent
 *Como Funciona* 
 - Abertura do Modal : Ao clicar no botão "cadastrar novo usuário" o modal é exibido na tela.
   
-- Preenchimento do Formulário : O usuário preenche os campos do formulário, incluindo um campo para nome, e-mail, whatsapp, perfil e seleciona uma imagem.
+- Preenchimento do Formulário : O usuário preenche os campos do formulário, incluindo um campo para nome, e-mail, whatsapp, perfil podendo colocar uma foto pessoal.
 
 - Exibição dos dados : Assim que cadastrados, os dados são exibidos em uma tabela onde podem ser visualizados, editados e excluidos 
   
